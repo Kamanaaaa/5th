@@ -1,0 +1,36 @@
+<!-- Lab 29: Give an example using media queries. -->
+<html>
+
+<head>
+    <title>Media Query</title>
+
+    <style>
+        body {
+            background: url(picture.jpg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            text-align: center;
+        }
+
+        @media (max-width: 900px) {
+            body {
+                background: url(scene.jpg);
+            }
+        }
+
+        @media (max-width: 600px) {
+            body {
+                background: url(scene.jpg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Media Query</h1>
+    <p>Background image changes with screen size.</p>
+
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple and Grouping Selectors</title>
+    <style>
+        /* Simple Selectors */
+        p {
+            color: blue;
+            font-size: 16px;
+        }
+
+        h1 {
+            color: darkblue;
+        }
+
+        .highlight {
+            background-color: yellow;
+        }
+
+        #main {
+            border: 2px solid black;
+            padding: 20px;
+        }
+
+        /* Grouping Selector */
+        h2, h3, span {
+            color: green;
+            font-weight: bold;
+        }
+
+        button, input {
+            padding: 10px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <h1>CSS Selectors Example</h1>
+        
+        <h2>Simple Selectors</h2>
+        <p>This is a paragraph with simple selector styling.</p>
+        
+        <h3>Grouping Selectors</h3>
+        <p class="highlight">This paragraph has a highlight class.</p>
+        
+        <span>This span uses grouping selector.</span>
+        
+        <button>Click Me</button>
+        <input type="text" placeholder="Enter text">
+    </div>
+</body>
+</html>

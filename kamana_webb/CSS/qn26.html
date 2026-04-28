@@ -1,0 +1,42 @@
+<!-- Lab 26: CSS Box-Sizing Property Example -->
+
+<html>
+
+<head>
+    <title>Box-Sizing Example</title>
+
+    <style>
+        div {
+            width: 200px;
+            padding: 20px;
+            border: 5px solid black;
+            margin-bottom: 20px;
+        }
+
+        .content-box {
+            box-sizing: content-box;   /* Default */
+            background-color: lightcoral;
+        }
+
+        .border-box {
+            box-sizing: border-box;
+            background-color: lightblue;
+        }
+    </style>
+</head>
+
+<body>
+
+    
+    <div class="content-box">
+        content-box (Default)
+    </div>
+
+    
+    <div class="border-box">
+        border-box
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!-- Lab 23: Design a webpage using CSS Overflow property -->
+
+<html>
+
+<head>
+    <title>CSS Overflow Property</title>
+
+    <style>
+        div {
+            width: 200px;
+            height: 100px;
+            border: 2px solid black;
+            margin-bottom: 20px;
+        }
+
+        .visible {
+            overflow: visible;
+        }
+
+        .hidden {
+            overflow: hidden;
+        }
+
+        .scroll {
+            overflow: scroll;
+        }
+
+        .auto {
+            overflow: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h3>overflow: visible (Default)</h3>
+    <div class="visible">
+        This is some long content that will overflow outside the box.
+    </div>
+
+    <h3>overflow: hidden</h3>
+    <div class="hidden">
+        This is some long content that will be hidden when it exceeds the box size.
+    </div>
+
+    <h3>overflow: scroll</h3>
+    <div class="scroll">
+        This is some long content that will show scrollbars even if not needed.
+    </div>
+
+    <h3>overflow: auto</h3>
+    <div class="auto">
+        This is some long content that will show scrollbars only when necessary.
+    </div>
+
+</body>
+
+</html>
