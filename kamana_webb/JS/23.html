@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <p id="out"></p>
+
+  <script>
+    let a1 = [5, 1, 9, 3, 7];
+    let a2 = [8, 2, 6, 4, 10];
+
+    let merged = a1.concat(a2);
+
+    let extracted = merged.slice(4, 9); 
+
+    let sorted = [...merged].sort((x, y) => x - y);
+
+    document.getElementById("out").innerHTML =
+      "Array 1: " + a1 + "<br>" +
+      "Array 2: " + a2 + "<br><br>" +
+      "Merged: " + merged + "<br>" +
+      "Extracted (pos 4 to 8): " + extracted + "<br>" +
+      "Sorted Ascending: " + sorted;
+  </script>
+</body>
+</html>

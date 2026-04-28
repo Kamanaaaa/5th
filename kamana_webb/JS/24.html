@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <p id="out"></p>
+
+  <script>
+    let fruits = ["apple", "orange", "mango"];
+
+    function addMoreItems(items) {
+      fruits = fruits.concat(items);
+    }
+
+    addMoreItems(["banana", "grapes", "pineapple"]);
+    fruits.pop();
+    fruits.pop();
+
+    document.getElementById("out").innerHTML = "Fruits (string): " + fruits.toString();
+  </script>
+</body>
+</html>

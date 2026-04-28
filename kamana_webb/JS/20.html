@@ -1,0 +1,35 @@
+<html>
+  <body>
+    <p id="para"></p>
+
+    <script>
+      let str = "web programming is amazing and exciting to learn";
+
+      let length = str.length;
+      let reverse = str.split("").reverse().join("");
+
+      let excitingIndex = str.indexOf("exciting"); // -1 if not found
+
+      let trimmed = str.trim();
+      let noExtraSpace = trimmed.replace(/\s+/g, " "); // removes extra spaces if present
+
+      let arr = noExtraSpace.split(" ");
+
+      let charPos = str.charAt(8); // position 8 (0-based index)
+      let part = str.substring(2, 11); // position 2 to 10
+      let replaced = str.replace("programming", "technology");
+
+      document.getElementById("para").innerHTML =
+        "Original String: " + str + "<br><br>" +
+        "Length: " + length + "<br>" +
+        "Reverse: " + reverse + "<br>" +
+        "Index of 'exciting': " + excitingIndex + "<br>" +
+        "Trimmed: " + trimmed + "<br>" +
+        "After removing extra spaces: " + noExtraSpace + "<br>" +
+        "Array: " + arr.join(", ") + "<br>" +
+        "Character at position 8: " + charPos + "<br>" +
+        "Substring (2 to 10): " + part + "<br>" +
+        "Replaced String: " + replaced;
+    </script>
+  </body>
+</html>

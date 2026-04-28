@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <p id="out"></p>
+
+  <script>
+    let arr = [10,20,30,40,50,60,70,80,90,100];
+
+    arr.push(110,120,130);            // add 3 at last
+    arr.pop();                        // remove 1 from last
+    arr.unshift(1,2,3);               // add 3 from first position
+    arr.splice(6, 0, 200,201,202,203,204); // add 5 from position 6 onward
+    arr.splice(2, 2);                 // delete any 2 elements from position 2 to 4
+
+    document.getElementById("out").innerHTML =
+      "Final Array: " + arr + "<br>" +
+      "Final Array as String: " + arr.toString();
+  </script>
+</body>
+</html>

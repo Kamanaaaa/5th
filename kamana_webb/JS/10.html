@@ -1,0 +1,25 @@
+<html>
+<head>
+    <title>String Functions</title>
+</head>
+<body>
+    <h2>String Handling Functions</h2>
+    <p id="output"></p>
+    <script>
+        let str = "Hello World";
+        let result = "";
+        result += "Length: " + str.length + "<br>";
+        result += "Uppercase: " + str.toUpperCase() + "<br>";
+        result += "Lowercase: " + str.toLowerCase() + "<br>";
+        result += "Index of 'World': " + str.indexOf("World") + "<br>";
+        result += "Substring (0 to 5): " + str.substring(0, 5) + "<br>";
+        result += "Replace: " + str.replace("World", "JavaScript") + "<br>";
+        result += "Split: " + str.split(" ") + "<br>";
+        let str2 = "   Hello JS   ";
+        result += "Trimmed: " + str2.trim() + "<br>";
+        result += "Includes 'Hello': " + str.includes("Hello") + "<br>";
+        result += "Concatenation: " + str.concat(" Programming") + "<br>";
+        document.getElementById("output").innerHTML = result;
+    </script>
+</body>
+</html>

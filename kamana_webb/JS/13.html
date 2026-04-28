@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Number to String Conversion</title>
+</head>
+<body>
+<h2>Number to String Conversion</h2>
+<p id="output"></p>
+<script>
+    let num = 12345;
+    let result = "";
+    result += "Original Value: " + num + "<br>";
+    result += "Type of num: " + typeof num + "<br>";
+    let str = num.toString();
+    result += "Converted Value: " + str + "<br>";
+    result += "Type of converted value: " + typeof str + "<br>";
+    document.getElementById("output").innerHTML = result;
+</script>
+</body>
+</html>

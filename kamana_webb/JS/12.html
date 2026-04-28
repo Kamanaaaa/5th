@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Replace Method Demo</title>
+</head>
+<body>
+
+<h2>JavaScript replace() Method</h2>
+
+<!-- Input sentence -->
+<input type="text" id="text" placeholder="Enter a sentence">
+<br><br>
+
+<!-- Word to replace -->
+<input type="text" id="oldWord" placeholder="Word to replace">
+<br><br>
+
+<!-- New word -->
+<input type="text" id="newWord" placeholder="New word">
+<br><br>
+
+<!-- Button -->
+<button onclick="replaceText()">Replace</button>
+
+<br><br>
+
+<!-- Output -->
+<p id="output"></p>
+
+<script>
+    function replaceText() {
+        let str = document.getElementById("text").value;
+        let oldWord = document.getElementById("oldWord").value;
+        let newWord = document.getElementById("newWord").value;
+
+        let result = str.replace(oldWord, newWord);
+
+        document.getElementById("output").innerHTML = "Result: " + result;
+    }
+</script>
+
+</body>
+</html>

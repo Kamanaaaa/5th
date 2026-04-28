@@ -1,0 +1,51 @@
+<html>
+<body>
+  <h3>Form Validation</h3>
+
+  Username: <input type="text" id="user"><br><br>
+  Password: <input type="password" id="pass"><br><br>
+
+  Country:
+  <select id="country">
+    <option value="">Select</option>
+    <option value="Nepal">Nepal</option>
+    <option value="India">India</option>
+    <option value="USA">USA</option>
+  </select>
+  <br><br>
+
+  <button onclick="check()">Submit</button>
+  <p id="msg"></p>
+
+  <script>
+    function check() {
+      var u = document.getElementById("user").value.trim();
+      var p = document.getElementById("pass").value.trim();
+      var c = document.getElementById("country").value;
+      var msg = document.getElementById("msg");
+
+      if (u.length !== 8) { 
+        msg.innerHTML = "Username must be exactly 8 characters."; 
+        return; 
+    }
+
+      if (!/^\d/.test(p)) { 
+        msg.innerHTML = "Password must start with a digit."; 
+        return;
+     }
+
+      if (!/^[0-9a-zA-Z]+$/.test(p)) { 
+        msg.innerHTML = "Password must be alphanumeric only.";
+         return; 
+        }
+
+      if (c === "") { 
+        msg.innerHTML = "Please select a country."; 
+        return;
+     }
+
+      msg.innerHTML = "Form submitted successfully!";
+    }
+  </script>
+</body>
+</html>

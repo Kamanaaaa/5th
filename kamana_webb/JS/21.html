@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <p id="para"></p>
+
+  <script>
+    let str = "Web programming is fun to learn but at the same time programming is difficult too. Web programming is core course in BIM third semester";
+
+    let count = (str.match(/programming/gi) || []).length;
+
+    document.getElementById("para").innerHTML =
+      "String: " + str + "<br><br>" +
+      "Number of times 'programming' is repeated: " + count;
+  </script>
+</body>
+</html>

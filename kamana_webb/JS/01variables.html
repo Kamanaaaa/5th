@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+  <title>var / let / const</title>
+</head>
+<body>
+<script>
+  // var: re-declare + re-assign
+  var subject = "JavaScript";   // string
+  var score = 80;              // number
+  document.write("var subject: " + subject + "<br>");
+  document.write("var score: " + score + "<br><br>");
+
+  var subject = "Web Tech";    // re-declare (allowed)
+  score = 90;                  // re-assign (allowed)
+  document.write("var subject (changed): " + subject + "<br>");
+  document.write("var score (changed): " + score + "<br><br>");
+
+  // let: re-assign (no re-declare in same scope)
+  let present = true;          // boolean
+  document.write("let present: " + present + "<br>");
+  present = false;
+  document.write("let present (changed): " + present + "<br><br>");
+
+  // const: cannot re-assign
+  const numbers = [1, 2, 3];   // array
+  const nothing = null;        // null
+  let notGiven;                // undefined
+
+  document.write("const numbers: " + numbers + "<br>");
+  document.write("const nothing: " + nothing + "<br>");
+  document.write("undefined notGiven: " + notGiven + "<br>");
+</script>
+</body>
+</html>

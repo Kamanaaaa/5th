@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <h3>Form Validation (Radio, Checkbox, Select)</h3>
+
+  <form onsubmit="return validateForm()">
+    <b>Gender (Radio):</b><br>
+    <input type="radio" name="gender" value="Male"> Male
+    <input type="radio" name="gender" value="Female"> Female
+    <br><br>
+
+    <b>Hobbies (Checkbox - select at least 2):</b><br>
+    <input type="checkbox" name="hobby" value="Music"> Music
+    <input type="checkbox" name="hobby" value="Sports"> Sports
+    <input type="checkbox" name="hobby" value="Reading"> Reading
+    <input type="checkbox" name="hobby" value="Travel"> Travel
+    <br><br>
+
+    <b>Country (Select):</b><br>
+    <select id="country">
+      <option value="">--Select--</option>
+      <option value="Nepal">Nepal</option>
+      <option value="India">India</option>
+      <option value="USA">USA</option>
+    </select>
+    <br><br>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <p id="msg"></p>
+
+  <script>
+    function validateForm() {
+      let gender = document.querySelector('input[name="gender"]:checked');
+      let hobbies = document.querySelectorAll('input[name="hobby"]:checked');
+      let country = document.getElementById("country").value;
+
+      if (!gender) {
+        document.getElementById("msg").innerHTML = "Please select a gender.";
+        return false;
+      }
+
+      if (hobbies.length < 2) {
+        document.getElementById("msg").innerHTML = "Please select at least 2 hobbies.";
+        return false;
+      }
+
+      if (country === "") {
+        document.getElementById("msg").innerHTML = "Please select a country.";
+        return false;
+      }
+
+      document.getElementById("msg").innerHTML = "Form submitted successfully!";
+      return false; // keep on same page
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <h2>Password Visibility</h2>
+
+  Password:
+  <input type="password" id="pass" value="cscs">
+  <button onclick="toggle()">Show</button>
+
+  <script>
+    function toggle() {
+      var p = document.getElementById("pass");
+      var btn = event.target;
+
+      if (p.type === "password") {
+        p.type = "text";
+        btn.innerHTML = "Hide";
+      } else {
+        p.type = "password";
+        btn.innerHTML = "Show";
+      }
+    }
+  </script>
+</body>
+</html>

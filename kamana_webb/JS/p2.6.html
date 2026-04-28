@@ -1,0 +1,37 @@
+<html>
+<body>
+  <h3>Login Form</h3>
+
+  Username: <input type="text" id="u"><br><br>
+  Password: <input type="password" id="p"><br><br>
+  <button onclick="login()">Submit</button>
+
+  <p id="msg"></p>
+
+  <script>
+    function login() {
+      var u = document.getElementById("u").value.trim();
+      var p = document.getElementById("p").value.trim();
+      var msg = document.getElementById("msg");
+
+      if (u === "" || p === "") { 
+        msg.innerHTML = "Username and Password are required!"; 
+        return; 
+    }
+      if (u === p) { 
+        msg.innerHTML = "Username and Password cannot be same!";
+         return;
+         }
+      if (u.length <= 5 || p.length <= 5) { 
+        msg.innerHTML = "Both must be greater than 5 characters!"; 
+        return; 
+    }
+      if (u === "nccsBim123" && p === "nccsKathmandu") {
+        msg.innerHTML = "Welcome to the NCCS";
+      } else {
+        msg.innerHTML = "Invalid login details!";
+      }
+    }
+  </script>
+</body>
+</html>
